@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "N:/Spring boot projects/authservice"
+		},
+		{
+			"path": "N:/Spring boot projects/gateway"
+		},
+		{
+			"path": "../../../../../../.."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}
