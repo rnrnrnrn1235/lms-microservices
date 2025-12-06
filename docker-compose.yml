@@ -1,0 +1,31 @@
+
+
+services:
+
+  auth-service:
+    build: ./authservice
+    ports:
+      - "8081:8081"
+    container_name: auth-service
+
+  library-service:
+    build: ./libraryservice
+    ports:
+      - "8082:8082"
+    container_name: library-service
+    depends_on:
+      - auth-service
+
+
+  gateway-service:
+    build: ./gateway
+    ports:
+      - "8080:8080"
+    container_name: gateway-service
+    depends_on:
+      - auth-service
+      - library-service
+
+networks:
+  default:
+    driver: bridge
